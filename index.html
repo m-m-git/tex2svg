@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convert TeX to SVG</title>
+  <meta name="description" content="A page for easily creating SVG from TeX.">
+
+  <link rel="stylesheet" href="https://unpkg.com/marx-css/css/marx.min.css">
+  <style>
+    textarea {
+      font-family: Consolas, monospace;
+    }
+
+    div {
+      margin: 16px 0;
+    }
+  </style>
+
+  <script defer src="./index.js"></script>
+  <script defer id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+
+<body>
+  <main>
+    <h2>Convert TeX to SVG</h2>
+    <div>
+      <label>Write your Math</label>
+      <textarea id="src" rows="4" spellcheck="false" placeholder="E = mc^2"></textarea>
+    </div>
+    <div>
+      <label>SVG preview</label>
+      <p id="preview"></p>
+    </div>
+    <div>
+      <label>SVG string</label>
+      <textarea id="result" rows="3" spellcheck="false" placeholder="<svg xmlns= ... </svg>"></textarea>
+      <div>
+        <button id="copyBtn">Copy to clipboad</button>
+        <button id="saveBtn">Save content</button>
+      </div>
+    </div>
+    <footer>
+      Powered by <a href="https://www.mathjax.org/">MathJax</a> | <a href="https://github.com/m-m-git/tex2svg">Page source</a>
+    </footer>
+  </main>
+</body>
+
+</html>
